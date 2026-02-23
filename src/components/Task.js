@@ -1,9 +1,12 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+
 export const Task = (props) => {
     return (
         <div className="Task" style={{backgroundColor: props.completed ? "green" : "white"}}>
             <h1>{props.taskName}</h1>
-            <button onClick={() => props.completeTask(props.id)}>Done</button>
-            <button onClick={() => props.deleteTask(props.id)}>X</button>
+            <Button onClick={() => props.completeTask(props.id)}>Done</Button>
+            <Button onClick={() => props.deleteTask(props.id)}>X</Button>
 
         </div>
     )
