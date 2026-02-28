@@ -14,12 +14,15 @@ function App() {
   }
 
   const addTask = () => {
+    if (!newTask.trim()) return;
+
     const task = {
       id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
       taskName: newTask,
       completed: false,
     };
     setTodoList([...todoList, task]); 
+    setNewTask("");
   }
 
   const deleteTask = (id) => {
